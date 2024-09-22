@@ -1,18 +1,11 @@
 import "./App.css";
+import WelcomeSection from "./components/WelcomeSection/WelcomeSection";
 
 function App() {
-
   return (
-    <div>
+    <main>
+      <WelcomeSection />
       <div>
-        <h1>Привет, меня зовут Евгений</h1>
-        <p>Я Frontend Разработчик</p>
-      </div>
-      <div>Мои проекты:</div>
-      <div>
-        <h1>Apple Ferrum Store
-        </h1>
-        <b>Онлайн Магазин техники Apple</b>
         <iframe
           src="https://apple-ferrum-store.vercel.app/"
           width={1200}
@@ -23,7 +16,7 @@ function App() {
           <h1>Hello</h1>
         </iframe>
       </div>
-    </div>
+    </main>
   );
 }
 

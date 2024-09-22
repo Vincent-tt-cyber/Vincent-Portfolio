@@ -1,0 +1,26 @@
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  padding: 50px 0;
+
+  gap: 50px;
+  align-items: center;
+  h1 {
+    font-size: 35px;
+  }
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  &__img-cover {
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    // background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
