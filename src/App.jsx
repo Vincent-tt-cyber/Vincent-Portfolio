@@ -1,22 +1,34 @@
-import "./App.css";
+import React from "react";
+import MyProjectSection from "./components/MyProjectsSection/MyProjectSection";
 import WelcomeSection from "./components/WelcomeSection/WelcomeSection";
 
+export const AppContext = React.createContext({});
 function App() {
+  const [myProjectsData, setMyProjectsData] = React.useState([]);
+
+  const fetchData = async () => {
+    try {
+      const data = await fetch(
+        "https://66af55c7b05db47acc5991e3.mockapi.io/myProjects/"
+      ).then((res) => res.json());
+      // console.log(data);
+      setMyProjectsData(data);
+    } catch (error) {
+      console.error(error);
+      setMyProjectsData([]);
+    }
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
   return (
-    <main>
+    <AppContext.Provider value={{ myProjectsData }}>
       <WelcomeSection />
-      <div>
-        <iframe
-          src="https://apple-ferrum-store.vercel.app/"
-          width={1200}
-          height={700}
-          frameBorder={1}
-          style={{ borderRadius: 10 }}
-        >
-          <h1>Hello</h1>
-        </iframe>
+      <div className="container">
+        <MyProjectSection />
       </div>
-    </main>
+    </AppContext.Provider>
   );
 }
 

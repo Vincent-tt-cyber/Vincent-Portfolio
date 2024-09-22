@@ -1,0 +1,49 @@
+.project-card {
+  //   background-color: #0c0c0c;
+  color: #fff;
+  &__title {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  &__image {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  &__iframe {
+    max-width: 1200px;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 15px;
+  }
+  &-tools {
+    display: flex;
+    align-items: center;
+	flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  &-tool {
+	font-size: 14px;
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  &__link {
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0 0 20px 0;
+  }
+}
