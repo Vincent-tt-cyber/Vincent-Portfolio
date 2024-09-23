@@ -22,9 +22,10 @@ const WelcomeSection = () => {
           <div className={styles["welcome-section-row"]}>
             <div className={styles["welcome-section-info"]}>
               <TypeAnimation
-                sequence={["Junoir React Developer", 5000]}
+                sequence={["Junoir React Developer", 1000]}
+                speed={5}
                 wrapper="h1"
-                repeat={Infinity}
+                // repeat={Infinity}
               />
               <motion.p
                 animate={{
